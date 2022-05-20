@@ -68,30 +68,37 @@ function GenPassword(){
     combo = special;}
 
   
-  let pass = [];
+  let arraypassword = [];
 
   for (let i = 0; i < promptLet; i++) {
     let combochoice = combo[Math.floor(Math.random() * combo.length)];
-    console.log (combochoice);
-  }
-     
+    arraypassword.push (combochoice); }
+
+  let stringpassword = arraypassword.join("");
+
+  console.log (stringpassword);
+    
 
 
 }
 
-
-
+function writePassword() {
+  let password = GenPassword();
+  let passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;}
+  
+generateBtn.addEventListener("click", writePassword);
 
 
 
 // Write password to the #password input
-function writePassword() {
-  let password = GenPassword();
-  let passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
-}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
