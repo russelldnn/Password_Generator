@@ -75,30 +75,14 @@ function GenPassword(){
     arraypassword.push (combochoice); }
 
   let stringpassword = arraypassword.join("");
+  Output(stringpassword);
 
-  console.log (stringpassword);
-    
+  return
 
+  function Output(stringpassword) {
+    document.getElementById("password").textContent = stringpassword;}
 
 }
-
-function writePassword() {
-  let password = GenPassword();
-  let passwordText = document.querySelector("#password");
   
-  passwordText.value = password;}
-  
-generateBtn.addEventListener("click", writePassword);
 
-
-
-// Write password to the #password input
-
-
-
-// Add event listener to generate button
-
-
-
-
-
+generateBtn.addEventListener("click", GenPassword);
