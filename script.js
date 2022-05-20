@@ -1,6 +1,6 @@
 // adding all variables
 special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
-number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+numb = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 commonlet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 capitallet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
@@ -26,6 +26,22 @@ function GenPassword(){
     confirmNum = confirm ("want to add numbers?");
     confirmSpe = confirm ("want to add special characters?");
   } 
+
+  if (!confirmCom && !confirmCap && !confirmNum && !confirmSpe) {
+    combo = alert("You must use some input to generate a password")
+  } else if ( confirmCap && confirmCom && confirmNum && confirmSpe) {
+    combo = numb.concat (special, commonlet, capitallet);
+  } else if ( confirmCap && confirmCom && confirmNum && !confirmSpe) {
+    combo = numb.concat (commonlet, capitallet);
+  } else if ( confirmCap && confirmCom && !confirmNum && confirmSpe) {
+    combo = capitallet.concat (commonlet, special);
+  } else if ( confirmCap && !confirmCom && confirmNum && confirmSpe) {
+    combo = capitallet.concat (numb, special);
+  } else if ( !confirmCap && confirmCom && confirmNum && confirmSpe) {
+    combo = commonlet.concat (special, numb);
+  }
+
+    
 }
 
 
