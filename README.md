@@ -7,7 +7,7 @@ once user choice is made the selected variable pools are concat'd together and t
 The randomly chosen assortment adheres to the initial password digit length and is then
 displayed in the box.
 
-live URL:
+live URL: https://russelldnn.github.io/Password_Generator/
 
 ![passgen1](https://user-images.githubusercontent.com/104922988/169438164-aa25dbdd-1c30-4fc3-90f6-ae99585bfe83.PNG)
 
