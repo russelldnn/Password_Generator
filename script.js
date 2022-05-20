@@ -55,7 +55,18 @@ function GenPassword(){
     combo = numb.concat (special);
   }
 
-  
+    else if ( confirmCap && !confirmCom && !confirmNum && !confirmSpe) {
+    combo = capitallet;}
+
+    else if ( !confirmCap && confirmCom && !confirmNum && !confirmSpe) {
+    combo = commonlet;}
+
+    else if ( !confirmCap && !confirmCom && confirmNum && !confirmSpe) {
+    combo = numb;}
+
+    else if ( !confirmCap && !confirmCom && !confirmNum && confirmSpe) {
+    combo = special;}
+     
 
 
 }
