@@ -66,6 +66,14 @@ function GenPassword(){
 
     else if ( !confirmCap && !confirmCom && !confirmNum && confirmSpe) {
     combo = special;}
+
+  
+  let pass = [];
+
+  for (let i = 0; i < promptLet; i++) {
+    let combochoice = combo[Math.floor(Math.random() * combo.length)];
+    console.log (combochoice);
+  }
      
 
 
