@@ -41,7 +41,23 @@ function GenPassword(){
     combo = commonlet.concat (special, numb);
   }
 
-    
+    else if ( confirmCap && confirmCom && !confirmNum && !confirmSpe) {
+    combo = capitallet.concat (commonlet);
+  } else if ( confirmCap && !confirmCom && confirmNum && !confirmSpe) {
+    combo = capitallet.concat (numb);
+  } else if ( !confirmCap && confirmCom && confirmNum && !confirmSpe) {
+    combo = commonlet.concat (numb);
+  } else if ( confirmCap && !confirmCom && !confirmNum && confirmSpe) {
+    combo = capitallet.concat (special);
+  } else if ( !confirmCap && confirmCom && !confirmNum && confirmSpe) {
+    combo = commonlet.concat (special);
+  } else if ( !confirmCap && !confirmCom && confirmNum && confirmSpe) {
+    combo = numb.concat (special);
+  }
+
+  
+
+
 }
 
 
